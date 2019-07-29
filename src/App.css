@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minesweeper {
+  display: flex;
+  flex-direction: column;
+  height: 592px;
+}
+
+h2 {
+  text-align: center;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.board-head {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.reset,
+.flag-count,
+.timer {
+  width: 55px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset {
+  padding: 2px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.reset img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.reset:active img {
+  height: 90%;
+  width: 90%;
+}
+
+.reset:focus {
+  outline: 0;
+}
+
+.board {
+  width: 499px;
+  height: 499px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+.board .row {
+  display: flex;
+  height: 50px;
+}
+
+.cell img {
+  position: relative;
+  height: 40%;
+  width: 40%;
+}
+
+.cell {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell.open {
+  background-color: #acacac;
+}
+
+.cell:hover {
+  background-color: #4c6baf;
+  color: white;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.board .row .cell:last-child {
+  border-right: none;
+}
